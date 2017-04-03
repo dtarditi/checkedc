@@ -7,5 +7,6 @@
 #define unchecked _Unchecked
 #define where _Where
 #define dynamic_check _Dynamic_check
+#define nullable _Nullable
 
 #endif /* __STDCHECKED_H */

@@ -11,15 +11,16 @@
 
 #include <time.h>
 
+time_t time(time_t *timer : itype(_Nullable _Ptr<time_t>));
 time_t mktime(struct tm *timeptr : itype(_Ptr<struct tm>));
 int timespec_get(struct timespec *ts : itype(_Ptr<struct timespec>),
                  int base);
 char *asctime(const struct tm *timeptr : itype(_Ptr<const struct tm>));
 char *ctime(const time_t *timer : itype(_Ptr<const time_t>));
 struct tm *gmtime(const time_t *timer : itype(_Ptr<const time_t>)) :
-  itype(_Ptr<struct tm>);
+  itype(_Nullable _Ptr<struct tm>);
 struct tm *localtime(const time_t *timer : itype(_Ptr<const time_t>)) :
-  itype(_Ptr<struct tm>);
+  itype(_Nullable _Ptr<struct tm>);
 size_t strftime(char * restrict output : count(maxsize),
                 size_t maxsize,
                 const char * restrict format,

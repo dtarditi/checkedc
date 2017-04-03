@@ -49,10 +49,10 @@ int thrd_create(thrd_t *thr : itype(_Ptr<thrd_t>),
                 thrd_start_t func :
                   itype(_Ptr<int (void * : itype(_Ptr<void>))>),
                 void *arg : itype(_Ptr<void>));
-int thrd_join(thrd_t thr, int *res : itype(_Ptr<int>));
+int thrd_join(thrd_t thr, int *res : itype(_Nullable _Ptr<int>));
 int thrd_sleep(const struct timespec *duration :
                  itype(_Ptr<const struct timespec>),
-               struct timespec *remaining : itype(_Ptr<struct timespec>));
+               struct timespec *remaining : itype(_Nullable _Ptr<struct timespec>));
 int tss_create(tss_t *key : itype(_Ptr<tss_t>),
                tss_dtor_t dtor :
                  itype(_Ptr<void (void * : itype(_Ptr<void>))>));

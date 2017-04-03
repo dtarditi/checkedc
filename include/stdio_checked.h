@@ -17,11 +17,11 @@
 // TODO: handle strings
 // int remove(const char *name);
 // int rename(const char *from, const char *to);
-FILE *tmpfile(void) : itype(_Ptr<FILE>);
+FILE *tmpfile(void) : itype(_Nullable _Ptr<FILE>);
 // TODO: handle strings
 // char *tmpnam(char *source);
 int fclose(FILE *stream : itype(_Ptr<FILE>));
-int fflush(FILE *stream : itype(_Ptr<FILE>));
+int fflush(FILE *stream : itype(_Nullable _Ptr<FILE>));
 FILE *fopen(const char * restrict filename,
             const char * restrict mode) : itype(_Ptr<FILE>);
 FILE *freopen(const char * restrict filename,
@@ -30,9 +30,9 @@ FILE *freopen(const char * restrict filename,
   itype(_Ptr<FILE>);
 
 void setbuf(FILE * restrict stream : itype(restrict _Ptr<FILE>),
-            char * restrict buf : count(BUFSIZ));
+            char * restrict buf : _Nullable count(BUFSIZ));
 int setvbuf(FILE * restrict stream : itype(restrict _Ptr<FILE>),
-            char * restrict buf : count(size),
+            char * restrict buf : _Nullable count(size),
             int mode, size_t size);
 
 //

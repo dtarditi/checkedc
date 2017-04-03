@@ -13,15 +13,15 @@
 #include <inttypes.h>
 
 intmax_t strtoimax(const char * restrict nptr,
-                   char ** restrict endptr : itype(restrict _Ptr<char *>),
+                   char ** restrict endptr : itype(restrict _Nullable _Ptr<char *>),
                    int base);
 uintmax_t strtoumax(const char * restrict nptr,
-                    char ** restrict endptr : itype(restrict _Ptr<char *>),
+                    char ** restrict endptr : itype(restrict _Nullable _Ptr<char *>),
                     int base);
 
 intmax_t wcstoimax(const wchar_t * restrict nptr,
-                   wchar_t ** restrict endptr : itype(restrict _Ptr<wchar_t *>),
+                   wchar_t ** restrict endptr : itype(restrict _Nullable _Ptr<wchar_t *>),
                    int base);
 uintmax_t wcstoumax(const wchar_t * restrict nptr,
-                    wchar_t ** restrict endptr : itype(restrict _Ptr<wchar_t *>),
+                    wchar_t ** restrict endptr : itype(restrict _Nullable _Ptr<wchar_t *>),
                     int base);
